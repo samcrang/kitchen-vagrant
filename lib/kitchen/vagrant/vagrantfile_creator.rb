@@ -52,7 +52,6 @@ module Kitchen
         arr << %{  c.vm.box = "#{config[:box]}"}
         arr << %{  c.vm.box_url = "#{config[:box_url]}"} if config[:box_url]
         arr << %{  c.vm.synced_folder ".", "/vagrant", disabled: true}
-        arr << %{  c.vm.hostname = "#{instance.name}.vagrantup.com"}
         arr << %{  c.ssh.username = "#{config[:username]}"} if config[:username]
       end
 
