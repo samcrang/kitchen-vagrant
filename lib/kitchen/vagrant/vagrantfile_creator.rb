@@ -37,8 +37,6 @@ module Kitchen
         guest_block(arr)
         network_block(arr)
         provider_block(arr)
-        chef_block(arr) if config[:use_vagrant_provision]
-        berkshelf_block(arr) if config[:use_vagrant_berkshelf_plugin]
         synced_folders_block(arr)
         arr << %{end}
         arr.join("\n")
